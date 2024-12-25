@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Foodie - Supper delicious Burger in town!</title>
+ <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+ <link rel="stylesheet" href="./assets/css/style.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@400;500;600;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+ <link rel="preload" as="image" href="./assets/images/hero-banner.png" media="min-width(768px)">
+ <link rel="preload" as="image" href="./assets/images/hero-banner-bg.png" media="min-width(768px)">
+ <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
+ </head>
+<style>
+    /* General styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .containerr {
+        position: relative;
+     top: 50px; /* Moves the content downward */
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    /* Left Section */
+    .contact-info {
+      flex: 1;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      animation: slideInLeft 1s ease-in-out;
+    }
+
+    .contact-info h3 {
+      color: #e67e22;
+      margin-bottom: 10px;
+    }
+
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-icons a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #e67e22;
+      color: white;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    /* Right Section */
+    .opening-hours img {
+     height: 600px;
+      flex: 1;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      animation: slideInRight 1s ease-in-out;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 768px) {
+      .contact-section {
+        flex-direction: column;
+      }
+    }
+
+    /* Animations */
+    @keyframes slideInLeft {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+</style>
+ <body id="top">
+   <!-- header -->
+<header class="header" data-header>
+     <div class="container">
+   
+       <h1>         <a href="#" class="logo">Foodie<span class="span">.</span></a>       </h1>
+   
+       <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+  
+          <li class="nav-item">
+            <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+  
+          <li class="nav-item">
+            <a href="about.html" class="navbar-link" data-nav-link>About Us</a>
+          </li>
+  
+          <li class="nav-item">
+            <a href="menue.html" class="navbar-link" data-nav-link>Shop</a>
+          </li>
+  
+          <li class="nav-item">
+            <a href="blog.html" class="navbar-link" data-nav-link>Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="dilivery.html" class="navbar-link" data-nav-link>Order</a>
+          </li>
+  
+          <li class="nav-item">
+            <a href="contact.html" class="navbar-link" data-nav-link>Contact Us</a>
+          </li>
+  
+        </ul>
+      </nav>
+                
+                    <div class="header-btn-group">
+                      <button class="search-btn" aria-label="Search" data-search-btn>
+                        <ion-icon name="search-outline"></ion-icon>
+                      </button>
+                
+                      <button class="btn btn-hover">Reservation</button>
+                
+                      <button class="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn>
+                        <span class="line top"></span>
+                        <span class="line middle"></span>
+                        <span class="line bottom"></span>
+                      </button>
+                    </div>
+                
+                  </div>
+ </header>
+                
+                
+ <!-- 
+    - #SEARCH BOX
+  -->
+
+  <main>
+  <div class="search-container" data-search-container>
+
+    <div class="search-box">
+      <input type="search" name="search" aria-label="Search here" placeholder="Type keywords here..."
+        class="search-input">
+
+      <button class="search-submit" aria-label="Submit search" data-search-submit-btn>
+        <ion-icon name="search-outline"></ion-icon>
+      </button>
+    </div>
+
+    <button class="search-close-btn" aria-label="Cancel search" data-search-close-btn></button>
+
+  </div>
+
+
+
+  <!-- contact -->
+
+  <div class="containerr">
+        <div class="contact-section">
+          <!-- Left Section -->
+          <div class="contact-info">
+            <h3>Our Addresses</h3>
+            <p>34, Karl Marx Sarani, Khidderpore, Kolkata - 700023</p>
+            <p>9, Kazi Nazrul Islam Avenue, Kaikhali Crossing, Kolkata - 700052</p>
+    
+            <h3>Email ID:</h3>
+            <p>info@indiarestaurant.in</p>
+    
+            <h3>Call Us Now</h3>
+            <p>Khidderpore: +91 8481848484, +91 8420533005</p>
+            <p>Kaikhali: +033 4804 9142, +91 99039 80011</p>
+    
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="#"><i>F</i></a> <!-- Replace with font-awesome icons -->
+              <a href="#"><i>T</i></a> <!-- Replace with font-awesome icons -->
+              <a href="#"><i>I</i></a> <!-- Replace with font-awesome icons -->
+            </div>
+          </div>
+    
+          <!-- Right Section -->
+          <div class="opening-hours">
+            <img src="assets/images/timetable.png" alt="image">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top" style="background-image: url('./assets/images/footer-illustration.png')">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="" class="logo">Foodie<span class="span">.</span></a>
+
+          <p class="footer-text">
+            Financial experts support or help you to to find out which way you can raise your funds more.
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-pinterest"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Contact Info</p>
+          </li>
+
+          <li>
+            <p class="footer-list-item">+1 (062) 109-9222</p>
+          </li>
+
+          <li>
+            <p class="footer-list-item">Info@YourGmail24.com</p>
+          </li>
+
+          <li>
+            <address class="footer-list-item">153 Williamson Plaza, Maggieberg, MT 09514</address>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Opening Hours</p>
+          </li>
+
+          <li>
+            <p class="footer-list-item">Monday-Friday: 08:00-22:00</p>
+          </li>
+
+          <li>
+            <p class="footer-list-item">Tuesday 4PM: Till Mid Night</p>
+          </li>
+
+          <li>
+            <p class="footer-list-item">Saturday: 10:00-16:00</p>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright-text">
+          &copy; 2022 <a href="#" class="copyright-link">codewithsadee</a> All Rights Reserved.
+        </p>
+      </div>
+    </div>
+
+  </footer>
+
+    <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+  
